@@ -37,6 +37,10 @@ public class User implements UserDetails {
     @JoinColumn(name = "role_id")
     private Role role;
 
+    public Long getId() {
+        return id;
+    }
+
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
         List<GrantedAuthority> authorities = new ArrayList<>();
